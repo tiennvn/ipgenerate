@@ -4,8 +4,8 @@ Công cụ dùng để generate ip ngẫu nhiên trong 1 range net của nhà m�
 Cho 1 ip net cùng subnet mask của ip vào và ấn Go
 
 # Ví dụ
-IP: 111.222.0.0/22 \\
-Kết quả: \\
+IP: 111.222.0.0/22\\
+Kết quả:\\
 ~~~
 111.222.1.185
 111.222.0.157
