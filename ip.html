@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <label for="iplist">List IP:</label>
-    <br>
-    <textarea name="iplist" id="iplist" cols="30" rows="20">
+    <div class="container">
+        <div class="form-group">
+            <label for="ip_number">Number of ips generate in 1 subnet: </label>
+            <input type="decimal" class="form-control" id="ip_number" placeholder="Default is 3">
+        </div>
+        <div class="form-group shadow-textarea:">
+            <label for="iplist">List IP subnet</label>
+            <textarea class="form-control z-depth-1" id="iplist" name="iplist" rows="7" placeholder="Input ip subnet list...">
 103.252.0.0/22 
 115.146.120.0/21 
 115.165.160.0/21 
 119.82.128.0/20 
-202.134.16.0/21 
-203.171.16.0/20 
-103.21.148.0/22 
-124.158.0.0/20 
-    </textarea>
-    <br>
-    <button type="submit" id="submit" onclick="IpGenerate()">Go</button>
-    <br>
-    <textarea name="iplist_result" id="iplist_result" cols="30" rows="100" ></textarea>
+            </textarea>
+            <p>Eg: 103.252.0.0/22, 192.168.0.0/18 </p>
+        </div>
+        <button type="submit" class="btn btn-primary"  id="submit" onclick="IpGenerate()">Go</button>
+        <div class="form-group shadow-textarea">
+            <label for="iplist_result">Result IP list generated:</label>
+            <textarea class="form-control z-depth-1" id="iplist_result" name="iplist_result" rows="20"></textarea>
+        </div>
+    </div>
 </body>
-<script src="ip/ip.js"></script>
+<script src="js/ip.js"></script>
 
 </html>

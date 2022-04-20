@@ -72,12 +72,17 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 } 
 
+var number_ips = 3;
 // Generate octec 4 array
 function get_octec4_arr() {
     var octec4_arr = [];
     var octec4;
-
-    while(octec4_arr.length < 3){
+    var number_ips_input = document.getElementById('ip_number').value;
+    if (number_ips_input == '')
+    {
+        number_ips_input = number_ips;
+    }
+    while(octec4_arr.length < number_ips_input){
         octec4 = randomNumber(3,250);        
         if(octec4_arr.indexOf(octec4) === -1) octec4_arr.push(octec4);
     }
