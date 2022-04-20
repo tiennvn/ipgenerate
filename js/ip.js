@@ -61,7 +61,11 @@ function IpGenerate()
             }
         }
     }
-    result_iplist_arr.shuffle();
+    var isShuffleIpList = document.getElementById("shuffle_checkbox").checked;
+    if (isShuffleIpList == true)
+    {
+        result_iplist_arr.shuffle();
+    }
     result_list = result_iplist_arr.join('\n')
 
     ip_list_result.value = result_list;
