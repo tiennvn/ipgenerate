@@ -1,4 +1,5 @@
 var ip_list = document.getElementById('iplist').value;
+var ip_count_result = document.getElementById('ip_count_result');
 var ip_list_result = document.getElementById('iplist_result');
 var splitted;
 
@@ -68,6 +69,7 @@ function IpGenerate()
     }
     result_list = result_iplist_arr.join('\n')
 
+    ip_count_result.value = result_list.length;
     ip_list_result.value = result_list;
 }
 

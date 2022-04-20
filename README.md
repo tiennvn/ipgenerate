@@ -1,11 +1,12 @@
-# Giới thiệu
-Công cụ dùng để generate ip ngẫu nhiên trong 1 range net của nhà mạng
-# Cách dùng
-Cho 1 ip net cùng subnet mask của ip vào và ấn Go
+# Introduction
+A tool generate random list ip in a subnet
 
-# Ví dụ
-IP: 111.222.0.0/22\\
-Kết quả:\\
+# How to use
+Input a ip and subnet mask of range, Submit to generate
+
+# Example
+* IP: 111.222.0.0/22
+* Result:
 ~~~
 111.222.1.185
 111.222.0.157

@@ -10,32 +10,50 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-group">
-            <label for="ip_number">Number of ips generate in 1 subnet: </label>
-            <input type="decimal" class="form-control" id="ip_number" placeholder="Default is 3">
+        <h1>IP list generate</h1>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="ip_number">Number of ips generate in 1 subnet: </label>
+                <input type="decimal" class="form-control" id="ip_number" placeholder="Default is 3">
+            </div>
         </div>
-        <div class="form-group shadow-textarea:">
-            <label for="iplist">List IP subnet</label>
-            <textarea class="form-control z-depth-1" id="iplist" name="iplist" rows="7" placeholder="Input ip subnet list...">
+
+        <div class="form-row">
+            <div class="form-group shadow-textarea col-md-8">
+                <label for="iplist">List IP subnet:</label>
+                <textarea class="form-control z-depth-1" id="iplist" name="iplist" rows="7" placeholder="Input ip subnet list...">
 103.252.0.0/22 
-115.146.120.0/21 
-115.165.160.0/21 
-119.82.128.0/20 
-            </textarea>
-            <p>Eg: 103.252.0.0/22, 192.168.0.0/18 </p>
+115.146.120.0/21
+115.165.160.0/21
+119.82.128.0/20
+                </textarea>
+                <p>Eg: 103.252.0.0/22, 192.168.0.0/18 </p>
+            </div>
         </div>
 
-        <div class="form-group form-check">
-            <input class="form-check-input" type="checkbox" value="" checked id="shuffle_checkbox">
-            <label class="form-check-label" for="shuffle_checkbox">
-              Shuffle IP list?🔀
-            </label>
-          </div>
+        <div class="form-row">
+            <div class="form-group form-check">
+                <input class="form-check-input" type="checkbox" value="" checked id="shuffle_checkbox">
+                <label class="form-check-label" for="shuffle_checkbox">
+                Shuffle IP list?🔀
+                </label>
+            </div>
+        </div>
 
-        <button type="submit" class="btn btn-primary"  id="submit" onclick="IpGenerate()">Go</button>
-        <div class="form-group shadow-textarea">
-            <label for="iplist_result">Result IP list generated:</label>
-            <textarea class="form-control z-depth-1" id="iplist_result" name="iplist_result" rows="20"></textarea>
+        <button type="submit" class="btn btn-primary"  id="submit" onclick="IpGenerate()">Generate</button>
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="ip_count_result">Number of result: </label>
+                <input type="decimal" class="form-control" id="ip_count_result" placeholder="" readonly>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group shadow-textarea col-md-8">
+                <label for="iplist_result">Result IP list generated:</label>
+                <textarea class="form-control z-depth-1" id="iplist_result" name="iplist_result" rows="20" readonly></textarea>
+            </div>
         </div>
     </div>
 </body>
